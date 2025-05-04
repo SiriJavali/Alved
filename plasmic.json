@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -24,7 +24,7 @@
     {
       "projectId": "53Xi8PjeNu3UNxbnjUtmHg",
       "projectApiToken": "xYXHkVki3UJ1woBkuXrWIn7vyN7XNuMuqZ1tlJCqp1nY4kAEMlI14FzKdT7hqni70bw3S2an4NDfIWzUnBqg",
-      "projectName": "Dark SaaS landing page",
+      "projectName": "Alved",
       "version": "latest",
       "cssFilePath": "plasmic/dark_saa_s_landing_page/plasmic.module.css",
       "components": [
@@ -465,6 +465,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.334",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.334/dist/plasmic.schema.json"
+  "cliVersion": "0.1.337",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.337/dist/plasmic.schema.json"
 }

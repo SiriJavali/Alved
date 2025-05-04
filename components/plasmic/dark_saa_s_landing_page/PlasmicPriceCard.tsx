@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -92,7 +92,6 @@ export type PlasmicPriceCard__OverridesType = {
   root?: Flex__<"div">;
   freeBox?: Flex__<"div">;
   h4?: Flex__<"h4">;
-  video?: Flex__<"div">;
   button?: Flex__<typeof Button>;
 };
 
@@ -323,32 +322,27 @@ function PlasmicPriceCard__RenderFunc(props: {
             })}
           >
             <div
-              data-plasmic-name={"video"}
-              data-plasmic-override={overrides.video}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.video,
-                {
-                  [sty.videoborders_flatLeft]: hasVariant(
-                    $state,
-                    "borders",
-                    "flatLeft"
-                  ),
-                  [sty.videoborders_flatRight]: hasVariant(
-                    $state,
-                    "borders",
-                    "flatRight"
-                  ),
-                  [sty.videoprimary]: hasVariant($state, "primary", "primary")
-                }
+                sty.text__rxvGk
               )}
             >
-              {hasVariant($state, "borders", "flatRight")
-                ? "Everything in pro"
-                : hasVariant($state, "borders", "flatLeft")
-                ? "1 Product"
-                : "unlimited video editing"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return undefined;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Unlimited element creation per project.";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
           </div>
         </div>
@@ -446,7 +440,7 @@ function PlasmicPriceCard__RenderFunc(props: {
                 ? "Analytics board"
                 : hasVariant($state, "primary", "primary")
                 ? "Analytics board"
-                : "Generate up to 3 elements per project."}
+                : "AI-powered auto-scene builder and intelligent element recommendations."}
             </div>
           </div>
         </div>
@@ -503,51 +497,60 @@ function PlasmicPriceCard__RenderFunc(props: {
               }
             />
           </div>
-          <div
-            className={classNames(projectcss.all, sty.column__aaYdw, {
-              [sty.columnborders_flatLeft__aaYdWozL96]: hasVariant(
-                $state,
-                "borders",
-                "flatLeft"
-              ),
-              [sty.columnborders_flatRight__aaYdwFcn18]: hasVariant(
-                $state,
-                "borders",
-                "flatRight"
-              ),
-              [sty.columnprimary__aaYdwmlwcx]: hasVariant(
-                $state,
-                "primary",
-                "primary"
-              )
-            })}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___7ZNh,
-                {
-                  [sty.textborders_flatLeft___7ZNhozL96]: hasVariant(
+          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))([
+            2, 3, 4
+          ]).map((__plasmic_item_0, __plasmic_idx_0) => {
+            const currentItem = __plasmic_item_0;
+            const currentIndex = __plasmic_idx_0;
+            return (
+              <div
+                className={classNames(projectcss.all, sty.column__aaYdw, {
+                  [sty.columnborders_flatLeft__aaYdWozL96]: hasVariant(
                     $state,
                     "borders",
                     "flatLeft"
                   ),
-                  [sty.textprimary___7ZNhMlwcx]: hasVariant(
+                  [sty.columnborders_flatRight__aaYdwFcn18]: hasVariant(
+                    $state,
+                    "borders",
+                    "flatRight"
+                  ),
+                  [sty.columnprimary__aaYdwmlwcx]: hasVariant(
                     $state,
                     "primary",
                     "primary"
                   )
-                }
-              )}
-            >
-              {hasVariant($state, "borders", "flatLeft")
-                ? "Insights panel"
-                : hasVariant($state, "primary", "primary")
-                ? "Analytics board"
-                : "Up to 10 projects"}
-            </div>
-          </div>
+                })}
+                key={currentIndex}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___7ZNh,
+                    {
+                      [sty.textborders_flatLeft___7ZNhozL96]: hasVariant(
+                        $state,
+                        "borders",
+                        "flatLeft"
+                      ),
+                      [sty.textprimary___7ZNhMlwcx]: hasVariant(
+                        $state,
+                        "primary",
+                        "primary"
+                      )
+                    }
+                  )}
+                >
+                  {hasVariant($state, "borders", "flatLeft")
+                    ? "Insights panel"
+                    : hasVariant($state, "primary", "primary")
+                    ? "Analytics board"
+                    : "Up to 10 projects"}
+                </div>
+              </div>
+            );
+          })}
           <div
             className={classNames(projectcss.all, sty.column__tuqb, {
               [sty.columnborders_flatLeft__tuqbozL96]: hasVariant(
@@ -1078,10 +1081,9 @@ function PlasmicPriceCard__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "h4", "video", "button"],
-  freeBox: ["freeBox", "h4", "video", "button"],
+  root: ["root", "freeBox", "h4", "button"],
+  freeBox: ["freeBox", "h4", "button"],
   h4: ["h4"],
-  video: ["video"],
   button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1091,7 +1093,6 @@ type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
   h4: "h4";
-  video: "div";
   button: typeof Button;
 };
 
@@ -1107,15 +1108,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicPriceCard__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicPriceCard__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicPriceCard__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicPriceCard__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;
@@ -1157,7 +1158,6 @@ export const PlasmicPriceCard = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     h4: makeNodeComponent("h4"),
-    video: makeNodeComponent("video"),
     button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicPriceCard

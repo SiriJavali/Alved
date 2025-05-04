@@ -686,7 +686,9 @@
 }
 .priceCard__iU7Rs:global(.__wab_instance) {
   max-width: 100%;
-  position: relative;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 @media (min-width: 0px) and (max-width: 930px) {
   .priceCard__iU7Rs:global(.__wab_instance) {
